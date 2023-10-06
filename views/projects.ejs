@@ -1,0 +1,40 @@
+<%- include ('partials/header.ejs') %>
+
+<%- include ('partials/main_nav.ejs') %>
+ 
+  <!--Main-->
+  <main class ="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to <%= title %> page</h1>
+      
+    </div>
+     <!--Portfolio Section-->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="portfolio-list">
+                <div>
+                    <i class="fa-solid fa-scroll"></i>
+                    <h2>Script</h2>
+                    <p>This script coded in Javascript using NodeJS and RobotJS libraries allows for the automation of any task within a game. It uses the
+                        colors found on screen in an area of a game and automates a clicking process to harvest items, and a removal of the items from the users inventory.
+                    </p>
+                    <a href="https://github.com/DaveSims1/Scripts/blob/main/index.js">View Source Code</a>
+                </div>
+                <div>
+                <div>
+                    <i class="fa-solid fa-ghost"></i>
+                    <h2>Ghost Clicker</h2>
+                    <p>This web based game is coded in HTML/CSS and Javascript. In this game you play with your cursor where you
+                    click on a ghost which pops up every so often. The more you successfully click the ghost the faster it moves across the area. </p>
+                    <a href="https://github.com/DaveSims1/GhostClicker/blob/main/Assignment3.html">View Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <%- include ('partials/bottom_nav.ejs') %>
+
+  <%- include ('partials/footer.ejs') %>
+

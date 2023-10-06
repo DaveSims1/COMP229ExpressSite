@@ -1,0 +1,99 @@
+<%- include ('partials/header.ejs') %>
+
+<%- include ('partials/main_nav.ejs') %>
+ 
+  <!--Main-->
+  <main class ="container">
+    <div class="jumbotron">
+      <h1 class="display-4"><%= title %> David Sims</h1>
+      
+    </div>
+     <!--About Section-->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutMe-col-1">
+                    <img src="/Assets/images/myself.jpg">
+                </div>
+                <div class="aboutMe-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hello, my name is David. I am a Software Engineering student at Centennial College in Ontario. 
+                        I have just entered my second year in this advanced diploma program which includes a co-op. Throughout
+                        my time in this program I have gained incredibly valuable skills to help me pursue a Software Engineering career.
+                        <br><br>
+                        Within this program, I have been able to work effectively in teams to develop, troubleshoot, and enhance code.
+                        During this work I have been able to develop technical design documents, undergo the development process, facilitate meetings, and 
+                        present our work to a class of peers.
+                        <br><br>
+                        Working within the Software Development Life Cycle, I have been able to incorporate and learn about programming processes such as Agile, Waterfall, and Iterative methods.
+                        Throughout this program I have worked hands on with programming, testing, and submitting developed projects in languages
+                        and libraries such as: C#, Java, NodeJS, RobotJS, JavaScript, SQL, and HTML/CSS.
+                         
+
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        
+                        
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Centennial College | Software Engineering Technologies</span><br><strong>Maintaing a GPA of 4.2</strong><br><br>Gained experience in working on a team, developing, and presenting technical
+                            documents as well as developing code, troubleshooting with issues that arise, and assist in translating requirements into functional and non-functional 
+                            specifications.<br><br> Working with an agile Software Development methods including: SCRUM, Kanban, and Waterfall methods. During these development
+                            processes I would work to estimate tasks we may require to perform the coding, testing, and designing. <br><br> Gained
+                            proficiencies in languages such as C#, Java, Javascript, SQL, 
+                            and HTML/CSS. Aswell as working with frameworks such as .NET and jQuery.</li>
+
+                            <li><span>Georgian College | Registered Practical Nursing</span><br>Graduated with Honours <br><br>
+                            During this program I gained effective critial thinking skills, time management, communication skills, and 
+                            leadership skills. <br><br> During this program I gained discipline skills to effectively learn the anatomy needed to become a Nurse
+                            along with learning about the many medications one can give, the effects the medications have, and the proper way to understand if someone
+                            can take these medications.
+                            <br><br> I graduated from this program and became a Registered Practical Nurse, obtaining a job as a 
+                            Paediatric Nurse.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>TastyPals</span><br>
+                            2023 - Present<br><br>Work primarily coded in Javascript and React for a mobile app. <br><br> 
+                            Working on a team such as this has given me incredible experience working with React, Xcode, and Javascript in a Software Developer setting.
+                            On this team we use agile process models such as Kanban, and SCRUM. <br><br>Throughout working on this project I have been able 
+                            to gain experience working with Git-Lab, this includes, committing code, opening merge requests, and merging approved requests.
+                            Working with this team also allows for unit testing to be done effectively and efficiently.</li>
+
+                            <li><span>Southlake Regional Health Center</span><br>
+                            2021 -  Present - Casual RPN <br><br>
+                            In this position I have been able to gain extraordinary teamwork experience, communication skills, and effective time management skills.
+                            <br><br> Working as a nurse I have been able to work under pressure and in intense situations, during this work I developed critical thinking skills
+                            which allow situations to go by smooth. <br><br> In this position I have been able to gain incredible experience working with others, understanding the 
+                            needs of others and growing with my team.</li>
+
+                            <li><span>Dr.Elmalem and Associates Optometrist</span><br>2021 - Present <br><br> In this position I assist the Optometrist with a patients appointment.
+                            This can include taking an early perscription of their eyes, testing the pressure of the eyes, and relaying this Informationto the Doctor.<br><br> In This
+                            office I work in our Dry Eye clinic where I am able to work more closely with people, testing their eyes, taking photos of the glands of their eye lids, and
+                            working with the doctor to figure out the course of treatment.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Soft Skills</span><br>Time management, Teamwork, Creativity, Adaptability, Leadership, Communication, Problem-Solving, Patience <br>
+                            Accountability, Critical Thinking, Persistence, Organization, Fast paced, and a Strong Work Ethic.</li>
+                            <li><span>Hard Skills</span><br>Experience with, C#, HTML/CSS, NodeJS, Javascript, Java, React, Git, SQL, Bash, Agile Process Models, MS Office - Word, Outlook,
+                            Excel and Powerpoint, </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <%- include ('partials/bottom_nav.ejs') %>
+
+  <%- include ('partials/footer.ejs') %>
+

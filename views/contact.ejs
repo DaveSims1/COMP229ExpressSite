@@ -1,0 +1,40 @@
+<%- include ('partials/header.ejs') %>
+
+<%- include ('partials/main_nav.ejs') %>
+ 
+  <!--Main-->
+  <main class ="container">
+    <div class="jumbotron">
+    </div>
+    <!--Contact section-->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-share"></i>david.sims098@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/sims-david"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/DaveSims1"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Assets/images/DavidSimsResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="text" name="email" placeholder="E-mail" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2" id="submitButton">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <%- include ('partials/bottom_nav.ejs') %>
+
+  <%- include ('partials/footer.ejs') %>
+
