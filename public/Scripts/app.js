@@ -7,7 +7,7 @@
     window.addEventListener("load", Start);
 })();
 
-/*JS for the education, skills, and experience section */
+/*JS for the about me section for the education, skills, and experience */
 var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
