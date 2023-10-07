@@ -1,3 +1,8 @@
+/*File Name: Assignment 1 Express Site
+  Student Name: David Sims
+  StudentID: 301268408
+  Date: 2023-10-06 */
+
 var express = require('express');
 var router = express.Router();
 
