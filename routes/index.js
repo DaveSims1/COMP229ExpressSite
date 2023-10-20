@@ -31,5 +31,9 @@ router.get('/services', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
+/* Secure */
+router.get('/secure', function(req, res, next) {
+  res.render('secure', { title: 'Secure' });
+});
 
 module.exports = router;
