@@ -29,6 +29,7 @@ router.get('/services', function(req, res, next) {
 });
 /* contact page. */
 router.get('/contact', function(req, res, next) {
+  console.log("contact");
   res.render('contact', { title: 'Contact' });
 });
 /* Secure */

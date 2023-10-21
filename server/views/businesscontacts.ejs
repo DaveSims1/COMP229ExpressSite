@@ -5,24 +5,24 @@
 
   <main class="container">
     <div class = "row">
-      <div class="div.col-md-offset-3.col-md-6">
+      <div class="offset-md-1 col-md-10">
         <h1><%= title %></h1>
         <br>
         <table class="table table-bordered table-striped table-hover">
           <!--Header Row-->
           <tr>
-            <th class="text-center">Test</th>
             <th class="text-center">Name</th>
-            <th class="text-center">Age</th>
+            <th class="text-center">E-mail</th>
+            <th class="text-center">Phone Number</th>
           </tr>
 
           <!--Repeatable Template-->
 
           <% items.forEach(item => { %>
             <tr>
-              <td class="text-center"><%= item.test %></td> 
-              <td class="text-center"><%= item.age %></td> 
               <td class="text-center"><%= item.name %></td> 
+              <td class="text-center"><%= item.email %></td> 
+              <td class="text-center"><%= item.phone %></td> 
             </tr>     
             <% }); %>
 
