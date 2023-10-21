@@ -1,9 +1,24 @@
+/**
+ * Name: David Sims
+ * Student Number: 301268408
+ * Class: COMP229 
+ * Assignment2
+ */
+
 //3rd party packages
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
+
+//Modules for authentication 
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 
 //Database Setup
 let mongoose = require('mongoose');
@@ -35,6 +50,35 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+//Setup express session
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}));
+
+//flash setup this will let error messages maintain error messages within local storage
+app.use(flash());
+
+//passport setup
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+//passport user config
+
+//user model isntance
+let userModel = require('../models/user');
+let User = userModel.User;
+
+//user authentication strategy
+passport.use(User.createStrategy());
+
+//Serialize and deserialize info of the user
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

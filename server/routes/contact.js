@@ -1,10 +1,26 @@
-
+/**
+ * Name: David Sims
+ * Student Number: 301268408
+ * Class: COMP229 
+ * Assignment2
+ */
 
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/contacts'); // Import the Mongoose model
 const contacts = require('../models/contacts');
 const mongoose = require('mongoose');
+
+let passport = require('passport');
+
+//guard function
+function requireAuth(req, res, next){
+    //is user logged in?
+    console.log("redirecting login");
+    if(!req.isAuthenticated()){
+        return res.redirect('/login');
+    }
+}
 
 // Express route to find items by name and render EJS view
 router.get('/businesscontacts', async (req, res) => {
@@ -178,32 +194,3 @@ router.get('/delete/:id', async (req, res, next) => {
 
 
 module.exports = router;
-
-
-
-
-// //routing modules
-// let express = require('express');
-// let router = express.Router();
-// let mongoose = require('mongoose');
-
-
-// //Connect to the contacts model
-// let Contact = require('../models/contacts');
-
-// //GET the contacts page
-
-// router.get('/', (req, res, next) => {
-//     Contact.find({}).sort('test').exec(
-//         (err, Contact) => {
-//             if(err){
-//                 return console.error(err);
-//             }
-//             else{
-//                 res.render('businesscontacts.ejs', {title: 'Contacts', BusniessContact: Contact}
-//             );
-//         }
-//     });
-// });
-
-//  module.exports = router;

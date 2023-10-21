@@ -1,3 +1,11 @@
+/**
+ * Name: David Sims
+ * Student Number: 301268408
+ * Class: COMP229 
+ * Assignment2
+ */
+
+
 let mongoose = require('mongoose');
 
 //create model class

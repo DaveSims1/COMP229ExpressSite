@@ -4,7 +4,9 @@
   Date: 2023-10-06 */
 
 var express = require('express');
-var router = express.Router();
+let router = express.Router();
+
+let indexController = require('../controllers/index');
 
 /* home page. */
 router.get('/', function(req, res, next) {
@@ -32,9 +34,19 @@ router.get('/contact', function(req, res, next) {
   console.log("contact");
   res.render('contact', { title: 'Contact' });
 });
-/* Secure */
-router.get('/secure', function(req, res, next) {
-  res.render('secure', { title: 'Secure' });
-});
+
+//router to get login display
+router.get('/login', indexController.displayLoginPage);
+//router to get login process
+router.post('/login', indexController.processLoginPage);
+
+//router for register display
+router.get('/register', indexController.displayRegisterPage);
+
+//router for register process
+router.post('/register', indexController.processRegisterPage);
+
+//logout
+router.get('/logout', indexController.performLogout);
 
 module.exports = router;
